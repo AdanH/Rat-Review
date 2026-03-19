@@ -13,7 +13,11 @@ if (!entry) {
 
 const { Content,  remarkPluginFrontmatter} = await render(entry);
 ---
-
+export async function getStaticPaths() {
+  return [];
+}
+``
+---
 <Layout
   seo={{
     title: entry.data.title,
